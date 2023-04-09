@@ -1,0 +1,9 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false
+  },
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "python.defaultInterpreterPath": "/Users/bytedance/.venv/whisper-api-oEQ_qSCe" // pipenv --venv
+}

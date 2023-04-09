@@ -4,7 +4,7 @@ import librosa
 import whisper
 
 app = Flask(__name__)
-
+model = whisper.load_model("small")
 
 @app.route('/')
 def home():
@@ -16,7 +16,6 @@ def upload():
     file = request.files['file']
     audio, sr = librosa.load(file)
     audio_array = np.array(audio)
-    model = whisper.load_model("small")
     result = model.transcribe(audio_array)
     return jsonify(result)
 
